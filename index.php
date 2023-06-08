@@ -61,6 +61,7 @@
     <span class="select_county">行政區:</span>
     <select id="area_dropdown" class="select_title" onchange="select_area()">
         <option>請選擇區域</option>
+        <option>請選擇區域</option>
 
     </select>
 </form>
