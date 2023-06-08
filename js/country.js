@@ -48,8 +48,7 @@ function select_country(){
 
 var dropdown = document.getElementById('dropdown');
 var parkinglot_taiwan = document.getElementById('parkinglot_taiwan');
-var textContent = parkinglot_taiwan.textContent;
-console.log(textContent);
+// var textContent = parkinglot_taiwan.textContent; //取得
 var index = dropdown.selectedIndex;
 // console.log(index_1);
 var datas = {
@@ -79,34 +78,30 @@ $.ajax({
 
 })
 
+//行政區
+var area_dropdown = document.getElementById('area_dropdown');
+var index_1 = area_dropdown.selectedIndex;
+var datas_1 = {
+    "dropdown_area": index_1,
 }
-
-function select_area(){
-
-    var area_dropdown = document.getElementById('area_dropdown');
-    var index_1 = area_dropdown.selectedIndex;
-    // console.log(index_1);
-    var datas_1 = {
-        "dropdown_area": index_1,
-    }
-    console.log(datas_1);
-    $.ajax({
-        type: 'POST',
-        url: './backend/APIs/country/area.php',
-        data: datas_1,
-        dataType: 'JSON',
-        success: function (response_1) {
-            var country_2 = '<option>請選擇區域</option>';
-            for (var j = 0; j < response_1.length; j++) {
-                country_2 = country_2 + '<option value="' + response_1[j].parkinglot_id + '">' + response_1[j].country_area + '</option>';
-                // console.log(country_2);
-            }
-            area_dropdown.innerHTML = country_2;
-    
-    
+console.log(datas_1);
+$.ajax({
+    type: 'POST',
+    url: './backend/APIs/country/area.php',
+    data: datas_1,
+    dataType: 'JSON',
+    success: function (response_1) {
+        var country_2 = '<option>請選擇區域</option>';
+        for (var j = 0; j < response_1.length; j++) {
+            country_2 = country_2 + '<option value="' + response_1[j].parkinglot_id + '">' + response_1[j].country_area + '</option>';
+            // console.log(country_2);
         }
-    
-    
-    })
-    
+        area_dropdown.innerHTML = country_2;
+
+
     }
+
+
+})
+
+}
