@@ -44,15 +44,29 @@
         }
 
         .map {
+            height: 50px;
             margin-left: 20px;
             margin-top: 15px;
+            background-color: black;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            padding:15px;
+            min-height:30px;
+
+        }
+        .map:hover {
+            background-color: gray;
+            color:white;
         }
 
         #map {
             margin-top: 20px;
             /* width: 500px; */
             height: 500px;
+            
         }
+
     </style>
 </head>
 <form action="" method="post">
@@ -75,8 +89,8 @@
     </select>
 </form>
 <form action="" method="post">
-    <input type="button" id="3d" value="衛星" class="map" onclick="threeD()">
-    <input type="button" id="2d" value="平面" class="map" onclick="twoD()">
+    <input type="button" id="3d" value="衛  星" class="map" onclick="threeD()">
+    <input type="button" id="2d" value="平  面" class="map" onclick="twoD()">
     <input type="button" id="Stamen" value="StamenTonerLite" class="map" onclick="Sta()">
 </form>
 
