@@ -44,11 +44,13 @@
         }
 
         .map {
-            margin-left: 55px;
+            margin-left: 20px;
             margin-top: 15px;
         }
 
         #map {
+            margin-top: 20px;
+            /* width: 500px; */
             height: 500px;
         }
     </style>
@@ -73,8 +75,9 @@
     </select>
 </form>
 <form action="" method="post">
-    <input type="button" value="地圖" class="map">
-    <input type="button" value="資料" class="map">
+    <input type="button" id="3d" value="衛星" class="map" onclick="threeD()">
+    <input type="button" id="2d" value="平面" class="map" onclick="twoD()">
+    <input type="button" id="Stamen" value="StamenTonerLite" class="map" onclick="Sta()">
 </form>
 
 <div id="map"></div>
