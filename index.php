@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<script src="./js/country.js"></script>
+    <script src="./js/country.js"></script>
     <meta charset="utf-8">
     <title>停車場即時資訊</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -17,6 +17,8 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <style>
         body {
@@ -40,9 +42,14 @@
             margin-left: 55px;
             margin-top: 50px;
         }
-        .map{
+
+        .map {
             margin-left: 55px;
             margin-top: 15px;
+        }
+
+        #map {
+            height: 500px;
         }
     </style>
 </head>
@@ -70,7 +77,7 @@
     <input type="button" value="資料" class="map">
 </form>
 
-
+<div id="map"></div>
 
 
 <!-- JavaScript -->
@@ -79,6 +86,7 @@
 
 <script src="./js/lib/jquery.js"></script>
 <script src="./js/userRights.js"></script>
+<script src="./js/leaflet.js"></script>
 </body>
 
 </html>
