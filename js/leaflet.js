@@ -1,4 +1,4 @@
-var map = L.map('map').setView([24.9988806, 121.5727678], 15);
+var map = L.map('map').setView([24.9988806, 121.5727678], 15); //標記為木柵動物園
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 15, //地圖規模
@@ -6,3 +6,12 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 var marker = L.marker([24.9988806, 121.5727678]).addTo(map); //標記符號
+
+//增加圓形標記
+var circle = L.circle([24.9988806,121.5727678], {
+    color: 'black',
+    fillColor: 'white',
+    fillOpacity: 0.6,
+    radius: 300
+    
+}).addTo(map);
