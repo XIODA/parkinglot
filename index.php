@@ -4,7 +4,7 @@
 <head>
     <script src="./js/country.js"></script>
     <meta charset="utf-8">
-    <title>停車場即時資訊</title>
+    <title>地圖資訊</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -66,6 +66,11 @@
             height: 500px;
             
         }
+        .totalPopulation {
+            text-align:end ;
+        }
+            
+        
 
     </style>
 </head>
@@ -88,12 +93,12 @@
 
     </select>
 </form>
+<div id="totalPopulation" class="totalPopulation"></div>
 <form action="" method="post">
     <input type="button" id="3d" value="衛  星" class="map" onclick="threeD()">
     <input type="button" id="2d" value="平  面" class="map" onclick="twoD()">
     <input type="button" id="Stamen" value="StamenTonerLite" class="map" onclick="Sta()">
 </form>
-
 <div id="map"></div>
 
 

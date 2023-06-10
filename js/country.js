@@ -50,6 +50,8 @@ function select_country() {
     console.log(map);
     var dropdown = document.getElementById('dropdown');
     var parkinglot_taiwan = document.getElementById('parkinglot_taiwan');
+    var totalPopulation = document.getElementById('totalPopulation');
+    console.log(totalPopulation);
     // var textContent = parkinglot_taiwan.textContent; //取得
     var index = dropdown.selectedIndex;
     // console.log(index_1);
@@ -72,6 +74,7 @@ function select_country() {
                 // console.log(response_2);
                 parkinglot_taiwan.innerHTML = response_2[j].country + 'の地圖';
                 map.setView([response_2[j].latitude, response_2[j].longitude], 10);
+                totalPopulation.innerHTML = '總人口數:'+response_2[j].totalpopulation + '人';
             }
 
 
