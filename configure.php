@@ -1,8 +1,8 @@
 <?php
-$hostname = "localhost";
-$username = "root";
+$hostname = "";
+$username = "";
 $password = "";
-$database = "parkinglot";
+$database = "";
 
 
 ?>
